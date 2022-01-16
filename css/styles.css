@@ -1,0 +1,518 @@
+header .navbar {
+  background-color: #fff;
+  z-index: 99;
+}
+header .container-fluid a .logo {
+  width: 100px;
+}
+header ul li {
+  padding: 0 4%;
+}
+header ul li .item {
+  position: relative;
+  color: #333;
+}
+header ul li .item:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  transition: all 0.8s;
+}
+header ul li .item:hover:after {
+  width: 100%;
+  background: #333;
+}
+
+.presentation {
+  width: 100%;
+}
+.presentation .presentation__container {
+  width: 100%;
+  min-height: 45em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #41464b;
+  border-radius: 0 0 0 50%;
+}
+@media (max-width: 1250px) {
+  .presentation .presentation__container {
+    grid-template-columns: 1fr;
+    border-radius: 0%;
+  }
+}
+.presentation .presentation__container .title {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  font-size: 2.8rem;
+  color: #fff;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: auto;
+}
+.presentation .presentation__container .title :nth-child(1) {
+  font-size: 4rem;
+}
+@media (max-width: 1250px) {
+  .presentation .presentation__container .title {
+    position: absolute;
+    z-index: 99;
+    color: #41464b;
+    top: 35%;
+    left: 5%;
+    font-size: 2vw;
+  }
+}
+.presentation .presentation__container .banner {
+  border-radius: 0 0 0 50%;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 1250px) {
+  .presentation .presentation__container .banner {
+    justify-self: center;
+    border-radius: 50% 0;
+    border-radius: 0%;
+    width: 100%;
+  }
+}
+.presentation .presentation__container .image {
+  background-image: url("../assets/images/imagen1.jpg");
+  background-size: cover;
+}
+
+.login {
+  margin: auto;
+  width: 70%;
+  padding: 20px;
+}
+.login .container-login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+@media (max-width: 900px) {
+  .login .container-login {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}
+.login .container-login .iniciar-sesion {
+  padding: 20px;
+  display: grid;
+  row-gap: 10px;
+}
+.login .container-login .iniciar-sesion small {
+  color: red;
+}
+.login .container-login .iniciar-sesion form > div {
+  display: grid;
+  row-gap: 10px;
+}
+.login .container-login .iniciar-sesion form {
+  display: grid;
+}
+.login .container-login .registrar {
+  padding: 20px;
+}
+
+.btn-fancyPrimary {
+  background-color: #0c0c0c !important;
+  color: #fff !important;
+}
+.btn-fancyPrimary:hover {
+  background-color: #292929 !important;
+  box-shadow: 2px 2px 20px 0px #80808052;
+}
+
+.fy-control-number {
+  border-style: none;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ddd;
+  height: 30px;
+  text-align: center;
+  box-shadow: 0px 0px 5px 2px #ffffff;
+  padding: 18px 0;
+}
+
+.fy-control-number:focus {
+  border-style: none;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0px 0px 5px 2px #dee2e6;
+  height: 30px;
+  text-align: center;
+  padding: 18px 0;
+  transition: 0.3s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 5%;
+  width: 100%;
+}
+
+.categoria {
+  display: grid;
+  text-align: center;
+  width: 70%;
+  justify-content: center;
+  margin: 5% auto;
+}
+.categoria h2 {
+  font-weight: 600;
+}
+.categoria .lista-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  justify-content: center;
+}
+.categoria .lista-categorias .item {
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  border-radius: 15%;
+}
+.categoria .lista-categorias .categoria1 {
+  background-image: url("../assets/images/anillos1.jpg");
+  background-size: cover;
+}
+.categoria .lista-categorias .categoria1:hover::before {
+  content: "Anillos";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background-color: rgba(0, 0, 0, 0.637);
+  width: 250px;
+  height: 250px;
+  color: white;
+  font-weight: 600;
+  border-radius: 15%;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.25s;
+}
+.categoria .lista-categorias .categoria2 {
+  background-image: url("../assets/images/aretes1.jpg");
+  background-size: cover;
+}
+.categoria .lista-categorias .categoria2:hover::before {
+  content: "Rebajas";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background-color: rgba(0, 0, 0, 0.637);
+  width: 250px;
+  height: 250px;
+  color: white;
+  font-weight: 600;
+  border-radius: 15%;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.25s;
+}
+.categoria .lista-categorias .categoria3 {
+  background-image: url("../assets/images/colecciones1.jpg");
+  background-size: cover;
+}
+.categoria .lista-categorias .categoria3:hover::before {
+  content: "Colecciones";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background-color: rgba(0, 0, 0, 0.637);
+  width: 250px;
+  height: 250px;
+  color: white;
+  font-weight: 600;
+  border-radius: 15%;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.25s;
+}
+.categoria .lista-categorias .categoria4 {
+  background-image: url("../assets/images/collar1.jpg");
+  background-size: cover;
+}
+.categoria .lista-categorias .categoria4:hover::before {
+  content: "Collar";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background-color: rgba(0, 0, 0, 0.637);
+  width: 250px;
+  height: 250px;
+  color: white;
+  font-weight: 600;
+  border-radius: 15%;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.25s;
+}
+.categoria .lista-categorias .categoria5 {
+  background-image: url("../assets/images/dijes1.jpg");
+  background-size: cover;
+}
+.categoria .lista-categorias .categoria5:hover::before {
+  content: "Dijes";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background-color: rgba(0, 0, 0, 0.637);
+  width: 250px;
+  height: 250px;
+  color: white;
+  font-weight: 600;
+  border-radius: 15%;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.25s;
+}
+.categoria .lista-categorias .categoria6 {
+  background-image: url("../assets/images/piercing1.jpg");
+  background-size: cover;
+}
+.categoria .lista-categorias .categoria6:hover::before {
+  content: "Piercing";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background-color: rgba(0, 0, 0, 0.637);
+  width: 250px;
+  height: 250px;
+  color: white;
+  font-weight: 600;
+  border-radius: 15%;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.25s;
+}
+.categoria .lista-categorias .categoria7 {
+  background-image: url("../assets/images/pulseras1.jpg");
+  background-size: cover;
+}
+.categoria .lista-categorias .categoria7:hover::before {
+  content: "Pulseras";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background-color: rgba(0, 0, 0, 0.637);
+  width: 250px;
+  height: 250px;
+  color: white;
+  font-weight: 600;
+  border-radius: 15%;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.25s;
+}
+.categoria .lista-categorias .categoria8 {
+  background-image: url("../assets/images/rebajas1.png");
+  background-size: cover;
+}
+.categoria .lista-categorias .categoria8:hover::before {
+  content: "Rebajas";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background-color: rgba(0, 0, 0, 0.637);
+  width: 250px;
+  height: 250px;
+  color: white;
+  font-weight: 600;
+  border-radius: 15%;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.25s;
+}
+
+.exclusivos {
+  background-color: rgba(0, 0, 0, 0.26);
+  padding: 5% 0;
+  margin: 5% auto;
+}
+.exclusivos .exclusivos-container {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  margin: auto;
+  column-gap: 50px;
+  align-items: center;
+}
+.exclusivos .exclusivos-container :nth-child(2) {
+  font-size: 1.6em;
+}
+@media (max-width: 900px) {
+  .exclusivos .exclusivos-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.exclusivos__img {
+  width: 100%;
+  border-radius: 15%;
+}
+.exclusivos__information {
+  display: grid;
+  height: min-content;
+  row-gap: 20px;
+}
+
+.buscador {
+  width: 60%;
+  padding-top: 5%;
+  margin: auto;
+}
+.buscador__text {
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.joyas {
+  display: grid;
+  text-align: center;
+  width: 80%;
+  justify-content: center;
+  margin: 5% auto;
+}
+.joyas h2 {
+  font-weight: 600;
+}
+.joyas .lista-joyas {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  justify-content: center;
+}
+.joyas .lista-joyas .lista-item {
+  width: 270px;
+  display: grid;
+  cursor: pointer;
+  padding: 10px;
+}
+.joyas .lista-joyas .lista-item:hover {
+  box-shadow: 2px 2px 20px 0px #80808052;
+}
+.joyas .lista-joyas .item {
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  border-radius: 15%;
+  margin-bottom: 20px;
+}
+.joyas .lista-joyas .joya6 {
+  background-image: url("../assets/images/anillos3.jpg");
+  background-size: cover;
+}
+.joyas .lista-joyas .joya7 {
+  background-image: url("../assets/images/abridores1.jpg");
+  background-size: cover;
+}
+.joyas .lista-joyas .joya8 {
+  background-image: url("../assets/images/aretes2.jpg");
+  background-size: cover;
+}
+.joyas .lista-joyas .joya9 {
+  background-image: url("../assets/images/cadenas1.jpg");
+  background-size: cover;
+}
+.suscribete {
+  background-color: transparent;
+  background-image: linear-gradient(180deg, #e6f4ed 70%, #ffffff 14%);
+  width: 100%;
+  margin: auto;
+  display: block;
+  padding: 8%;
+}
+.suscribete .suscripcion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+  width: 70%;
+  margin: auto;
+}
+@media (max-width: 900px) {
+  .suscribete .suscripcion {
+    grid-template-columns: 1fr;
+  }
+}
+.suscribete .suscripcion img {
+  justify-self: center;
+  width: 100%;
+}
+.suscribete .suscripcion__text {
+  margin: 6em 3em;
+}
+.suscribete .suscripcion__text h5 {
+  color: #8b8b8b;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.suscribete .suscripcion__text h5::before {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #8dceae;
+  display: flex;
+}
+
+.lista-busqueda .item, .lista-carrito .item {
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  border-radius: 15%;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */

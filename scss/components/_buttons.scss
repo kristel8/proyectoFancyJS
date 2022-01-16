@@ -1,0 +1,9 @@
+.btn-fancyPrimary {
+  background-color: rgb(12, 12, 12) !important;
+  color: #fff !important;
+
+  &:hover {
+    background-color: rgb(41, 41, 41) !important;
+    box-shadow: 2px 2px 20px 0px #80808052;
+  }
+}

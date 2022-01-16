@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fancy Store</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="../assets/icons/logo.png" alt="logo" class="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link item" aria-current="page" href="/index.html"
+                  >INICIO</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link item" aria-current="page" href="/index.html"
+                  >OFERTAS</a
+                >
+              </li>
+              <li class="nav-item dropdown item">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Categorías
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Anillos</a></li>
+                  <li><a class="dropdown-item" href="#">Rebajas</a></li>
+                  <li><a class="dropdown-item" href="#">Colecciones</a></li>
+                  <li><a class="dropdown-item" href="#">Collar</a></li>
+                  <li><a class="dropdown-item" href="#">Dijes</a></li>
+                  <li><a class="dropdown-item" href="#">Piercings</a></li>
+                  <li><a class="dropdown-item" href="#">Pulseras</a></li>
+                  <li><a class="dropdown-item" href="#">Rebajas</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Todos</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link item" aria-current="page" href="/index.html"
+                  >TIENDA</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link item active" href="/pages/login.html"
+                  >Unirme</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link item active" href="/pages/login.html"
+                  >Carrito</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="presentation">
+        <div class="presentation__container">
+          <div class="title">
+            <span>FANCY</span>
+            <span>El brillo está en ti.</span>
+          </div>
+
+          <div class="banner image"></div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="buscador">
+        <span class="buscador__text">Te ayudamos a buscar...</span>
+        <br>
+        <div class="d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            id="buscador"
+            placeholder="Buscar"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" id="btnBuscar">
+            Buscar
+          </button>
+        </div>
+        <small></small>
+      </section>
+      <section class="categoria">
+        <h2>Nuestras CATEGORÍAS</h2>
+        <br />
+        <section class="lista-categorias">
+          <div class="item categoria1"></div>
+          <div class="item categoria2"></div>
+          <div class="item categoria3"></div>
+          <div class="item categoria4"></div>
+          <div class="item categoria5"></div>
+          <div class="item categoria6"></div>
+          <div class="item categoria7"></div>
+          <div class="item categoria8"></div>
+        </section>
+      </section>
+
+      <section class="exclusivos">
+        <div class="exclusivos-container">
+          <img
+            src="assets/images/anillos2.jpg"
+            alt="exclusivos"
+            class="exclusivos__img"
+          />
+          <div class="exclusivos__information">
+            <span>COLECCIÓN</span>
+            <span>ORO 18K - 14K</span>
+            <span>Piezas exclusivas de oro amarillo</span>
+            <button class="btn btn-fancyPrimary">DESCUBRE</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="joyas">
+        <h2>Nuestras JOYAS</h2>
+        <br>
+        <section class="lista-joyas" id="lista-joyas">
+          <!-- <div class="lista-item">
+            <div class="item joya1"></div>
+            <span>ANILLOS</span>
+            <span>Anillo onda oro</span>
+            <span><b>S/ 539.00</b></span>
+            <br>
+            <button class="btn btn-fancyPrimary">Añadir al carrito</button>
+          </div>
+
+          <div class="lista-item">
+            <div class="item joya2"></div>
+            <span>ABRIDORES</span>
+            <span>Aretes chispa mini dorado</span>
+            <span><b>S/ 199.00</b></span>
+            <br>
+            <button class="btn btn-fancyPrimary">Añadir al carrito</button>
+          </div>
+
+          <div class="lista-item">
+            <div class="item joya3"></div>
+            <span>ANILLOS</span>
+            <span>Argollas oval cristal 15mm</span>
+            <span><b>S/ 129.00</b></span>
+            <br>
+            <button class="btn btn-fancyPrimary">Añadir al carrito</button>
+          </div>
+
+          <div class="lista-item">
+            <div class="item joya4"></div>
+            <span>CADENAS</span>
+            <span>Cadena lomito</span>
+            <span><b>S/ 89.00</b></span>
+            <br>
+            <button class="btn btn-fancyPrimary">Añadir al carrito</button>
+
+          </div> -->
+        </section>
+      </section>
+
+      <section class="suscribete">
+        <section class="suscripcion">
+          <img class="suscripcion__image" src="assets/images/suscripcion1.png" />
+          <div class="suscripcion__text">
+            <h5>NOVEDADES</h5>
+            <span>SUBSCRIBETE A <br> NUESTRO NEWSLETTER</span>
+            <span>OBTEN UN 10% DSCT EN TU PRIMERA COMPRA</span>
+            <div class="form-group">
+              <input type="email" class="form-control" id="emailSubscribe" aria-describedby="suscribe" placeholder="Correo Electrónico">
+            </div>
+            <button class="btn btn-fancyPrimary">SUSCRIBIRME</button>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+  <!-- 
+  <script type="module" src="js/main.js"></script>
+
+ -->
+ <script type="module" src="../js/index.js"></script>
+ <script type="module" src="js/buscar.js"></script>
+
+</html>

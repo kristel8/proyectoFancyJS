@@ -1,0 +1,133 @@
+header {
+  .navbar {
+    background-color: #fff;
+    z-index: 99;
+  }
+  .container-fluid a {
+    .logo {
+      width: 100px;
+    }
+  }
+
+  ul li {
+    padding: 0 4%;
+
+    .item {
+      position: relative;
+      color: #333;
+    }
+
+    .item:after {
+      content: "";
+      display: block;
+      margin: auto;
+      height: 2px;
+      width: 0px;
+      transition: all 0.8s;
+    }
+
+    .item:hover:after {
+      width: 100%;
+      background: #333;
+    }
+  }
+}
+
+.presentation {
+  width: 100%;
+  .presentation__container {
+    width: 100%;
+    min-height: 45em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #41464b;
+    border-radius: 0 0 0 50%;
+
+    @media (max-width: 1250px) {
+      grid-template-columns: 1fr;
+      border-radius: 0%;
+    }
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      font-size: 2.8rem;
+      color: #fff;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      margin: auto;
+      :nth-child(1) {
+        font-size: 4rem;
+      }
+
+      @media (max-width: 1250px) {
+        position: absolute;
+        z-index: 99;
+        color: #41464b;
+        top: 35%;
+        left: 5%;
+        font-size: 2vw;
+    }
+    }
+    .banner {
+      border-radius: 0 0 0 50%;
+      width: 100%;
+      position: relative;
+
+      @media (max-width: 1250px) {
+        justify-self: center;
+        border-radius: 50% 0;
+        border-radius: 0%;
+        width: 100%;
+      }
+    }
+
+    .image {
+      background-image: url("../assets/images/imagen1.jpg");
+      background-size: cover;
+    }
+    
+
+  }
+}
+
+.login {
+  margin: auto;
+  width: 70%;
+  padding: 20px;
+  
+  .container-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+    .iniciar-sesion {
+      padding: 20px;
+      display: grid;
+      row-gap: 10px;
+
+      small {
+        color: red;
+      }
+
+      form > div {
+        display: grid;
+        row-gap: 10px;
+      }
+
+      form {
+        display: grid;
+      }
+    }
+
+    .registrar {
+      padding: 20px;
+    }
+
+  }
+}

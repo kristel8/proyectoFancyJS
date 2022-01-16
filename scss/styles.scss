@@ -1,0 +1,280 @@
+@import "components/header";
+@import "components/buttons";
+@import "components/inputs";
+@import "animation/animations";
+@import "base/mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 5%;
+  width: 100%;
+}
+
+.categoria {
+  display: grid;
+  text-align: center;
+  width: 70%;
+  justify-content: center;
+  margin: 5% auto;
+  h2 {
+    font-weight: 600;
+  }
+
+  .lista-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+
+    .item {
+      width: 250px;
+      height: 250px;
+      cursor: pointer;
+      border-radius: 15%;
+    }
+
+    .categoria1 {
+      background-image: url("../assets/images/anillos1.jpg");
+      background-size: cover;
+      &:hover::before {
+        content: "Anillos";
+        @include cardHover;
+      }
+    }
+
+    .categoria2 {
+      background-image: url("../assets/images/aretes1.jpg");
+      background-size: cover;
+      &:hover::before {
+        content: "Rebajas";
+        @include cardHover;
+      }
+    }
+
+    .categoria3 {
+      background-image: url("../assets/images/colecciones1.jpg");
+      background-size: cover;
+      &:hover::before {
+        content: "Colecciones";
+        @include cardHover;
+      }
+    }
+
+    .categoria4 {
+      background-image: url("../assets/images/collar1.jpg");
+      background-size: cover;
+      &:hover::before {
+        content: "Collar";
+        @include cardHover;
+      }
+    }
+
+    .categoria5 {
+      background-image: url("../assets/images/dijes1.jpg");
+      background-size: cover;
+      &:hover::before {
+        content: "Dijes";
+        @include cardHover;
+      }
+    }
+
+    .categoria6 {
+      background-image: url("../assets/images/piercing1.jpg");
+      background-size: cover;
+      &:hover::before {
+        content: "Piercing";
+        @include cardHover;
+      }
+    }
+
+    .categoria7 {
+      background-image: url("../assets/images/pulseras1.jpg");
+      background-size: cover;
+      &:hover::before {
+        content: "Pulseras";
+        @include cardHover;
+      }
+    }
+
+    .categoria8 {
+      background-image: url("../assets/images/rebajas1.png");
+      background-size: cover;
+      &:hover::before {
+        content: "Rebajas";
+        @include cardHover;
+      }
+    }
+  }
+}
+
+.exclusivos {
+  background-color: rgba(0, 0, 0, 0.26);
+  padding: 5% 0;
+  margin: 5% auto;
+
+  .exclusivos-container {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin: auto;
+    column-gap: 50px;
+    align-items: center;
+    :nth-child(2) {
+      font-size: 1.6em;
+    }
+    @media (max-width: 900px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__img {
+    width: 100%;
+    border-radius: 15%;
+  }
+
+  &__information {
+    display: grid;
+    height: min-content;
+    row-gap: 20px;
+  }
+}
+
+.buscador {
+  width: 60%;
+  padding-top: 5%;
+  margin: auto;
+  &__text {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.joyas {
+  display: grid;
+  text-align: center;
+  width: 80%;
+  justify-content: center;
+  margin: 5% auto;
+  h2 {
+    font-weight: 600;
+  }
+
+  .lista-joyas {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+
+    .lista-item {
+      width: 270px;
+      display: grid;
+      cursor: pointer;
+      padding: 10px;
+      &:hover {
+        box-shadow: 2px 2px 20px 0px #80808052;
+      }
+    }
+
+    .item {
+      width: 250px;
+      height: 250px;
+      cursor: pointer;
+      border-radius: 15%;
+      margin-bottom: 20px;
+    }
+
+    .joya6 {
+      background-image: url("../assets/images/anillos3.jpg");
+      background-size: cover;
+      &:hover::before {
+      }
+    }
+
+    .joya7 {
+      background-image: url("../assets/images/abridores1.jpg");
+      background-size: cover;
+      &:hover::before {
+      }
+    }
+
+    .joya8 {
+      background-image: url("../assets/images/aretes2.jpg");
+      background-size: cover;
+      &:hover::before {
+      }
+    }
+
+    .joya9 {
+      background-image: url("../assets/images/cadenas1.jpg");
+      background-size: cover;
+      &:hover::before {
+      }
+    }
+  }
+}
+
+.suscribete {
+  background-color: transparent;
+  background-image: linear-gradient(180deg, #e6f4ed 70%, #ffffff 14%);
+  width: 100%;
+  margin: auto;
+  display: block;
+  padding: 8%;
+
+  .suscripcion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    width: 70%;
+    margin: auto;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+    img {
+      justify-self: center;
+      width: 100%;
+    }
+
+    &__text {
+      margin: 6em 3em;
+      h5 {
+        color: #8b8b8b;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+      }
+
+      h5::before {
+        content: "";
+        width: 50px;
+        height: 3px;
+        background: #8dceae;
+        display: flex;
+      }
+    }
+  }
+}
+
+.lista-busqueda, .lista-carrito {
+  .item {
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    border-radius: 15%;
+    margin-bottom: 20px;
+  }
+}
