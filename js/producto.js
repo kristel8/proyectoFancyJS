@@ -1,6 +1,12 @@
+import { productoService } from './services.js'
+
 export class Producto {
   constructor() {
-    this.productos = JSON.parse(localStorage.getItem('productos')) || [];
+    this.obtenerProducts();
+  }
+
+  async obtenerProducts() {
+      this.productos = await productoService() || [];
   }
 
   createProduct( item ) {

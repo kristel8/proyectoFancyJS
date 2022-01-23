@@ -1,0 +1,34 @@
+[
+    {
+        "id": 6,
+        "nombre": "Anillo onda oro",
+        "precio": 539.00,
+        "stock": 10,
+        "category": "anillos",
+        "image": "anillos3.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Aretes chispa mini dorado",
+        "precio": 199.00,
+        "stock": 10,
+        "category": "abridores",
+        "image": "abridores1.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Argollas oval cristal 15mm",
+        "precio": 129.00,
+        "stock": 10,
+        "category": "aretes",
+        "image": "aretes2.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Cadena lomito",
+        "precio": 89.00,
+        "stock": 10,
+        "category": "cadenas",
+        "image": "cadenas1.jpg"
+    }
+]

@@ -2,6 +2,7 @@ import { Producto } from "./producto.js";
 import { Carrito } from "./carrito.js";
 import { añadirCantidad, añadirEventoCarrito } from "./buscar.js";
 import { productos, joyas, usuarios } from "./data/data.js";
+import { productoService, joyasService } from './services.js'
 
 const producto = new Producto();
 const carrito = new Carrito();
@@ -46,14 +47,14 @@ export const eventoBuscar = () => {
   });
 };
 
-function listaJoyas() {
+async function listaJoyas() {
   let URLactual = window.location;
   if (URLactual.pathname === "/pages/buscar.html") {
     return;
   }
 
   const listaItems = document.getElementById("lista-joyas");
-  const listaObtenida = JSON.parse(localStorage.getItem("joyas"));
+  const listaObtenida = await joyasService();
   for (const item of listaObtenida) {
     const itemDiv = document.createElement("div");
     itemDiv.innerHTML = `<div class="lista-item" id="lista-item${item.id}" data-id="${item.id}">
@@ -81,6 +82,13 @@ let URLactual = window.location;
 if (URLactual.pathname === "/index.html") {
   listaJoyas();
   eventoBuscar();
+
+  $('#scroll-top').click(() => {
+    $('html, body').animate({
+      scrollTop: $("#navigation").offset().top
+    });
+  });
+
 }
 
 function añadirEventoVerProducto(itemSeleccionado) {
@@ -94,4 +102,5 @@ function añadirEventoVerProducto(itemSeleccionado) {
   }
 }
 
-export { añadirEventoVerProducto };
+
+  export { añadirEventoVerProducto };
