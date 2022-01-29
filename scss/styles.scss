@@ -22,9 +22,6 @@ body {
   width: 70%;
   justify-content: center;
   margin: 5% auto;
-  h2 {
-    font-weight: 600;
-  }
 
   .lista-categorias {
     display: flex;
@@ -115,7 +112,7 @@ body {
 }
 
 .exclusivos {
-  background-color: rgba(0, 0, 0, 0.26);
+  background-color: rgb(123 255 255 / 17%);
   padding: 5% 0;
   margin: 5% auto;
 
@@ -143,7 +140,7 @@ body {
   &__information {
     display: grid;
     height: min-content;
-    row-gap: 20px;
+    text-align: center;
   }
 }
 
@@ -155,7 +152,6 @@ body {
     text-align: center;
     width: 100%;
     justify-content: center;
-    display: flex;
     font-size: 2rem;
     font-weight: 600;
   }
@@ -183,6 +179,7 @@ body {
       display: grid;
       cursor: pointer;
       padding: 10px;
+      border-radius: 20px;
       &:hover {
         box-shadow: 2px 2px 20px 0px #80808052;
       }
@@ -251,6 +248,8 @@ body {
 
     &__text {
       margin: 6em 3em;
+      display: grid;
+      row-gap: 20px;
       h5 {
         color: #8b8b8b;
         display: flex;
@@ -297,4 +296,22 @@ body {
 .scroll-top:hover {
   cursor: pointer;
   background-color: #5a5a5a;
+}
+
+.subtitle > h3, h2 {
+  font-weight: 600;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+.subtitle > h3::before, h3::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #8dceae;
+  display: flex;
+  text-align: center;
 }

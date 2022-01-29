@@ -2,7 +2,7 @@ import { productoService } from './services.js'
 
 export class Producto {
   constructor() {
-    this.obtenerProducts();
+    this.productos = this.obtenerProducts();
   }
 
   async obtenerProducts() {
@@ -18,11 +18,13 @@ export class Producto {
     return this.productos;
   }
 
-  findOneByIdProduct(id) {
-    if(this.productos.length > 0) {
-      const item = this.productos.find((element) => element.id === id);
-      return item;
-    }
+  async findOneByIdProduct(id) {
+    await this.obtenerProducts();
+
+      if(this.productos.length > 0) {
+        const item = this.productos.find((element) => element.id === id);
+        return item;
+      }
   }
 
   findProductByCategory(category) {

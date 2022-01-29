@@ -1,28 +1,16 @@
 import { Producto } from "./producto.js";
-import { Carrito } from "./carrito.js";
-import { añadirCantidad, añadirEventoCarrito } from "./buscar.js";
-import { productos, joyas, usuarios } from "./data/data.js";
-import { productoService, joyasService } from './services.js'
+import { añadirEventoCarrito } from "./buscar.js";
+import { joyasService } from './services.js'
 
 const producto = new Producto();
-const carrito = new Carrito();
 
 const btnBuscar = document.getElementById("btnBuscar");
 const buscador = document.getElementById("buscador");
-
-function add() {
-  localStorage.setItem("productos", JSON.stringify(productos));
-  localStorage.setItem("joyas", JSON.stringify(joyas));
-  localStorage.setItem("usuarios", JSON.stringify(usuarios));
-}
-
-add();
 
 function buscarItem() {
   if (!buscador.value) return;
 
   const resultadoDeBusqueda = producto.findProductByName(buscador.value);
-
   if (resultadoDeBusqueda.length > 0) {
     localStorage.removeItem("resultadoBusqueda");
     localStorage.setItem("valorBuscador", buscador.value);
@@ -38,28 +26,49 @@ function buscarItem() {
 }
 
 export const eventoBuscar = () => {
+  //Añade evento al boton buscar
   btnBuscar.addEventListener("click", buscarItem);
 
+  //Añade evento enter en el buscador
   buscador.addEventListener("keyup", (e) => {
+    console.log(e);
     if (e.keyCode == 13) {
       buscarItem();
     }
   });
 };
 
+const URLactual = window.location;
+
+if (URLactual.pathname === "/index.html" || URLactual.pathname === "/") {
+  //Ejecutamos las funciones que se mostrarán a primera vista
+  listaJoyas();
+  eventoBuscar();
+
+  //Animación de subir scroll
+  $('#scroll-top').click(() => {
+    $('html, body').animate({
+      scrollTop: $("#navigation").offset().top
+    });
+  });
+}
+
 async function listaJoyas() {
-  let URLactual = window.location;
+  //Validamos si es la página Buscar para no ser ejecutado
   if (URLactual.pathname === "/pages/buscar.html") {
     return;
   }
 
+  //Llamamos el servicio y renderizamos los cards
   const listaItems = document.getElementById("lista-joyas");
   const listaObtenida = await joyasService();
   for (const item of listaObtenida) {
+
+    item.category = (item.category).toUpperCase();
     const itemDiv = document.createElement("div");
     itemDiv.innerHTML = `<div class="lista-item" id="lista-item${item.id}" data-id="${item.id}">
-        <div class="item joya${item.id}"></div>
-         <span>${item.category}</span>
+        <div class="item joya${item.id}" id="joya${item.id}"  data-id="${item.id}"></div>
+         <span><b>${item.category}</b></span>
         <span>${item.nombre}</span>
         <span><b>S/ ${item.precio}</b></span>
         <br>
@@ -70,26 +79,17 @@ async function listaJoyas() {
 
     listaItems.appendChild(itemDiv);
 
-    const itemSeleccionado = document.getElementById(`lista-item${item.id}`);
+    const itemSeleccionado = document.getElementById(`joya${item.id}`);
     const btnAddCarrito = document.getElementById(`btnAddCarrito${item.id}`);
     const idItem = document.querySelector(`#btnAddCarrito${item.id}`);
+
+    //Añadimos eventos al botón y al card
     añadirEventoCarrito(btnAddCarrito, idItem);
     añadirEventoVerProducto(itemSeleccionado);
   }
 }
 
-let URLactual = window.location;
-if (URLactual.pathname === "/index.html") {
-  listaJoyas();
-  eventoBuscar();
 
-  $('#scroll-top').click(() => {
-    $('html, body').animate({
-      scrollTop: $("#navigation").offset().top
-    });
-  });
-
-}
 
 function añadirEventoVerProducto(itemSeleccionado) {
   if (URLactual.pathname === "/pages/verProducto.html") {
@@ -103,4 +103,4 @@ function añadirEventoVerProducto(itemSeleccionado) {
 }
 
 
-  export { añadirEventoVerProducto };
+export { añadirEventoVerProducto };

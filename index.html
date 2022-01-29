@@ -21,7 +21,7 @@
   <body>
     <header>
       <nav id="navigation" class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
+        <div class="container-fluid" style="justify-content: center;">
           <a class="navbar-brand" href="#"
             ><img src="../assets/icons/logo.png" alt="logo" class="logo"
           /></a>
@@ -41,11 +41,6 @@
               <li class="nav-item">
                 <a class="nav-link item" aria-current="page" href="/index.html"
                   >INICIO</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link item" aria-current="page" href="/index.html"
-                  >OFERTAS</a
                 >
               </li>
               <li class="nav-item dropdown item">
@@ -109,8 +104,10 @@
 
     <main>
       <section class="buscador">
-        <span class="buscador__text">Te ayudamos a buscar...</span>
-        <br>
+        <section class="buscador__text subtitle">
+          <h3><small>Te ayudamos a buscar</small></h3>
+        </section>
+        <br />
         <div class="d-flex">
           <input
             class="form-control me-2"
@@ -119,14 +116,13 @@
             placeholder="Buscar"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success" id="btnBuscar">
-            Buscar
-          </button>
+          <button class="btn btn-outline-success" id="btnBuscar">Buscar</button>
         </div>
         <small></small>
       </section>
-      <section class="categoria">
-        <h2>Nuestras CATEGORÍAS</h2>
+      <section class="categoria subtitle">
+        <h3><small>Nuestras</small></h3>
+        <h2><b>CATEGORÍAS</b></h2>
         <br />
         <section class="lista-categorias">
           <div class="item categoria1"></div>
@@ -147,8 +143,9 @@
             alt="exclusivos"
             class="exclusivos__img"
           />
-          <div class="exclusivos__information">
-            <span>COLECCIÓN</span>
+          <div class="exclusivos__information subtitle">
+            <h3><small>Nuestras</small></h3>
+            <h2><b>COLECCIÓN</b></h2>
             <span>ORO 18K - 14K</span>
             <span>Piezas exclusivas de oro amarillo</span>
             <button class="btn btn-fancyPrimary">DESCUBRE</button>
@@ -158,56 +155,32 @@
 
       <section class="joyas">
         <h2>Nuestras JOYAS</h2>
-        <br>
+        <br />
         <section class="lista-joyas" id="lista-joyas">
-          <!-- <div class="lista-item">
-            <div class="item joya1"></div>
-            <span>ANILLOS</span>
-            <span>Anillo onda oro</span>
-            <span><b>S/ 539.00</b></span>
-            <br>
-            <button class="btn btn-fancyPrimary">Añadir al carrito</button>
-          </div>
-
-          <div class="lista-item">
-            <div class="item joya2"></div>
-            <span>ABRIDORES</span>
-            <span>Aretes chispa mini dorado</span>
-            <span><b>S/ 199.00</b></span>
-            <br>
-            <button class="btn btn-fancyPrimary">Añadir al carrito</button>
-          </div>
-
-          <div class="lista-item">
-            <div class="item joya3"></div>
-            <span>ANILLOS</span>
-            <span>Argollas oval cristal 15mm</span>
-            <span><b>S/ 129.00</b></span>
-            <br>
-            <button class="btn btn-fancyPrimary">Añadir al carrito</button>
-          </div>
-
-          <div class="lista-item">
-            <div class="item joya4"></div>
-            <span>CADENAS</span>
-            <span>Cadena lomito</span>
-            <span><b>S/ 89.00</b></span>
-            <br>
-            <button class="btn btn-fancyPrimary">Añadir al carrito</button>
-
-          </div> -->
         </section>
       </section>
 
       <section class="suscribete">
         <section class="suscripcion">
-          <img class="suscripcion__image" src="assets/images/suscripcion1.png" />
+          <img
+            class="suscripcion__image"
+            src="assets/images/suscripcion1.png"
+          />
           <div class="suscripcion__text">
             <h5>NOVEDADES</h5>
-            <span>SUBSCRIBETE A <br> NUESTRO NEWSLETTER</span>
+            <span
+              >SUBSCRIBETE A <br />
+              NUESTRO NEWSLETTER</span
+            >
             <span>OBTEN UN 10% DSCT EN TU PRIMERA COMPRA</span>
             <div class="form-group">
-              <input type="email" class="form-control" id="emailSubscribe" aria-describedby="suscribe" placeholder="Correo Electrónico">
+              <input
+                type="email"
+                class="form-control"
+                id="emailSubscribe"
+                aria-describedby="suscribe"
+                placeholder="Correo Electrónico"
+              />
             </div>
             <button class="btn btn-fancyPrimary">SUSCRIBIRME</button>
           </div>
@@ -221,8 +194,7 @@
   <script type="module" src="js/main.js"></script>
 
  -->
- <script type="module" src="../js/index.js"></script>
- <script type="module" src="js/buscar.js"></script>
- <script src="../js/jquery.min.js"></script>
-
+  <script type="module" src="../js/index.js"></script>
+  <script type="module" src="js/buscar.js"></script>
+  <script src="../js/jquery.min.js"></script>
 </html>

@@ -3,7 +3,7 @@ import { Producto } from "../js/producto.js";
 const idProducto = localStorage.getItem("productoSeleccionado");
 
 const producto = new Producto();
-const productoItem = producto.findOneByIdProduct(+idProducto);
+const productoItem = await producto.findOneByIdProduct(+idProducto);
 
 $(".producto").append(
   `
