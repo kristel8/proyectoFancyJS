@@ -43,21 +43,17 @@
                   >INICIO</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link item" aria-current="page" href="/index.html"
-                  >OFERTAS</a
-                >
-              </li>
               <li class="nav-item dropdown item">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle active"
                   href="#"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  
                 >
-                  Categorías
+                  CATEGORÍAS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Anillos</a></li>
@@ -80,14 +76,19 @@
                 >
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link item" href="/pages/login.html"
-                  >Unirme</a
+              <li class="nav-item" id="nav-unirme">
+                <a class="nav-link item"
+                  >UNIRME</a
+                >
+              </li>
+              <li class="nav-item" id="nav-salir">
+                <a class="nav-link item "
+                  >SALIR</a
                 >
               </li>
               <li class="nav-item">
                 <a class="nav-link item" href="/pages/verCarrito.html"
-                  >Carrito</a
+                  >CARRITO</a
                 >
               </li>
             </ul>
@@ -109,13 +110,14 @@
               Buscar
             </button>
           </div>
-          <section class="d-flex m-5">
             
-        <div id="lista-busqueda" class="row row-cols-1 row-cols-md-2 g-4 m-2">
-        </div>
+        <section class="lista-busqueda" id="lista-busqueda">
         </section>
     </main>
   </body>
+
+  <div id="toast" class="toast hide"></div>
+
   <script type="module" src="../js/buscar.js"></script>
 
 </html>

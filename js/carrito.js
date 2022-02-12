@@ -17,9 +17,6 @@ export class Carrito {
     if(this.lista.length > 0) {
       const item = this.lista.find((element) => element.id === itemId);
 
-      // if (!item) {
-      //   throw new Error("No existe el item id:" + itemId);
-      // }
       return item;
     }
   }

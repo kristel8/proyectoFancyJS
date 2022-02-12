@@ -14,7 +14,7 @@ header {
 
     .item {
       position: relative;
-      color: #333;
+      color: rgb(17, 138, 138);
     }
 
     .item:after {
@@ -28,7 +28,7 @@ header {
 
     .item:hover:after {
       width: 100%;
-      background: #333;
+      background: rgb(17, 138, 138);
     }
   }
 }
@@ -40,7 +40,7 @@ header {
     min-height: 45em;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #41464b;
+    background-color: rgb(17, 138, 138);
     border-radius: 0 0 0 50%;
 
     @media (max-width: 1250px) {

@@ -1,17 +1,17 @@
-import { productoService } from './services.js'
+import { getProductoService } from './services.js'
 
 export class Producto {
   constructor() {
     this.productos = this.obtenerProducts();
   }
 
+  //Obtiene el servicio de Productos
   async obtenerProducts() {
-      this.productos = await productoService() || [];
+      this.productos = await getProductoService() || [];
   }
 
-  createProduct( item ) {
-    this.productos.push( item )
-    localStorage.setItem( 'productos', JSON.stringify( this.productos ) );
+  async createProduct( item ) {
+      await postProductoService( item );
   }
 
   findAllProducts() {
@@ -28,7 +28,7 @@ export class Producto {
   }
 
   findProductByCategory(category) {
-    return this.productos.filter((element) => element.category === category);
+    return this.productos.filter((element) => element.category == category);
   }
 
   findProductByName(nombre) {

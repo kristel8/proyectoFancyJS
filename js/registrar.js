@@ -1,5 +1,5 @@
 import { Usuario } from "./usuario.js";
-import { validateField } from "./utils.js";
+import { logueado, validateField } from "./utils.js";
 
 const usuario = new Usuario();
 
@@ -9,6 +9,9 @@ const apellidos = document.getElementById("apellidos");
 const password = document.getElementById("password");
 const email = document.getElementById("email");
 const repeatPassword = document.getElementById("repeatPassword");
+
+const isLogueado = localStorage.getItem('isLogueado');
+logueado(isLogueado);
 
 nombres.addEventListener("keyup", () => {
   const flgElement = nombres.validity.valid;
@@ -21,7 +24,6 @@ apellidos.addEventListener("keyup", () => {
 });
 
 email.addEventListener("keyup", () => {
-  console.log(email.validity);
   const flgElement = email.validity.valid;
   validateField(flgElement, "field-email", 'Ingrese un correo válido');
 });
@@ -31,7 +33,7 @@ password.addEventListener("keyup", () => {
     const elementPassword =
       document.getElementsByClassName("field-password")[0].lastElementChild;
     if (password.value.length < 5) {
-      elementPassword.innerText = "La constraseña debe ser más de 5 carácteres";
+      elementPassword.innerText = "La contraseña debe ser más de 5 carácteres";
     } else {
       elementPassword.innerText = "";
     }

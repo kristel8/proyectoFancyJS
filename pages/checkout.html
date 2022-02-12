@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fancy Store</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="../assets/icons/logo.png" alt="logo" class="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link item" aria-current="page" href="/index.html"
+                  >INICIO</a
+                >
+              </li>
+              <li class="nav-item dropdown item">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  CATEGORÍAS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Anillos</a></li>
+                  <li><a class="dropdown-item" href="#">Rebajas</a></li>
+                  <li><a class="dropdown-item" href="#">Colecciones</a></li>
+                  <li><a class="dropdown-item" href="#">Collar</a></li>
+                  <li><a class="dropdown-item" href="#">Dijes</a></li>
+                  <li><a class="dropdown-item" href="#">Piercings</a></li>
+                  <li><a class="dropdown-item" href="#">Pulseras</a></li>
+                  <li><a class="dropdown-item" href="#">Rebajas</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Todos</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link item" aria-current="page" href="/index.html"
+                  >TIENDA</a
+                >
+              </li>
+
+              <li class="nav-item" id="nav-unirme">
+                <a class="nav-link item" href="/pages/login.html">UNIRME</a>
+              </li>
+              <li class="nav-item" id="nav-salir">
+                <a class="nav-link item">SALIR</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link item active" href="/pages/verCarrito.html"
+                  >CARRITO</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <form name="registrarPedido" id="form-checkout" style="margin: 2%;">
+        <h3>Realizar Pedido</h3>
+        <br>
+        <section class="checkout">
+          <section>
+            <div class="field-nombres">
+              <label for="nombres" class="form-label">Nombres</label>
+              <input type="text" name="nombres" class="form-control" id="nombres" required/>
+              <small></small>
+
+            </div>
+            <div class="field-apellidos mb-3">
+              <label for="apellidos" class="form-label">Apellidos</label>
+              <input type="text" name="apellidos" class="form-control" id="apellidos" required/>
+              <small></small>
+
+            </div>
+            <div class="field-dni mb-3">
+              <label for="dni" class="form-label">DNI</label>
+              <input type="number" name="dni" class="form-control" onKeyPress="if(this.value.length==8) return false;"  id="dni" minlength="8" required/>
+              <small></small>
+
+            </div>
+            <div class="field-pais mb-3">
+              <label for="pais" class="form-label">Pais</label>
+              <input type="text" name="pais" class="form-control" id="pais" required/>
+              <small></small>
+
+            </div>
+            <div class="field-telefono mb-3">
+              <label for="telefono" class="form-label">Telefono</label>
+              <input type="number" name="telefono" class="form-control" onKeyPress="if(this.value.length==9) return false;"  id="telefono" minlength="9" maxlength="9" required/>
+              <small></small>
+
+            </div>
+            <div class="field-correo mb-3">
+              <label for="correo" class="form-label">Correo</label>
+              <input type="email" name="correo" class="form-control" id="correo" required/>
+              <small></small>
+
+            </div>
+          </section>
+          <section id="detalleEnvio">
+            <div class="field-direccion mb-3">
+              <label for="direccion" class="form-label">Direccion</label>
+              <input type="text" name="direccion" class="form-control" id="direccion" />
+              <small></small>
+            </div>
+
+            <div class="field-referencia mb-3">
+              <label for="referencia" class="form-label">Referencia</label>
+              <input type="text" name="referencia" class="form-control" id="referencia" />
+              <small></small>
+            </div>
+
+            <div class="field-provincia mb-3">
+              <label for="provincia" class="form-label">Provincia</label>
+              <input type="text" name="provincia" class="form-control" id="provincia" />
+              <small></small>
+            </div>
+
+            <div class="field-ciudad mb-3">
+              <label for="ciudad" class="form-label">Ciudad</label>
+              <input type="text" name="ciudad" class="form-control" id="ciudad" />
+              <small></small>
+            </div>
+
+            <div class="field-codigoPostal mb-3">
+              <label for="codigoPostal" class="form-label">Código Postal</label>
+              <input type="number" name="codigoPostal" class="form-control" id="codigoPostal" />
+              <small></small>
+            </div>
+          </section>
+        </section>
+        <br>
+        <button
+          id="btnRealizarPedido"
+          class="btn btn-fancyPrimary"
+          style="width: 100%;"
+          type="submit"
+        >
+          REALIZAR EL PEDIDO
+        </button>
+        <small></small>
+
+      </form>
+    </main>
+  </body>
+  <script type="module" src="../js/checkout.js"></script>
+</html>

@@ -1,9 +1,14 @@
 import { Producto } from "../js/producto.js";
+import { salirDeSesion } from "./login.js";
+import { logueado } from "./utils.js";
 
 const idProducto = localStorage.getItem("productoSeleccionado");
 
 const producto = new Producto();
 const productoItem = await producto.findOneByIdProduct(+idProducto);
+const isLogueado = localStorage.getItem('isLogueado');
+logueado(isLogueado);
+salirDeSesion();
 
 $(".producto").append(
   `

@@ -43,11 +43,6 @@
                   >INICIO</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link item" aria-current="page" href="/index.html"
-                  >OFERTAS</a
-                >
-              </li>
               <li class="nav-item dropdown item">
                 <a
                   class="nav-link dropdown-toggle"
@@ -56,8 +51,9 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  
                 >
-                  Categorías
+                  CATEGORÍAS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Anillos</a></li>
@@ -80,12 +76,19 @@
                 >
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link item" href="/pages/login.html">Unirme</a>
+              <li class="nav-item" id="nav-unirme">
+                <a class="nav-link item" href="/pages/login.html"
+                  >UNIRME</a
+                >
+              </li>
+              <li class="nav-item" id="nav-salir">
+                <a class="nav-link item "
+                  >SALIR</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link item active" href="/pages/verCarrito.html"
-                  >Carrito</a
+                  >CARRITO</a
                 >
               </li>
             </ul>
@@ -94,8 +97,8 @@
       </nav>
     </header>
 
-    <main>
-      <div class="table-responsive">
+    <main class="carrito">
+      <section class="carrito__tabla">
         <table id="tabla-carrito" class="table">
           <thead>
             <tr>
@@ -110,14 +113,86 @@
           </thead>
           <tbody id="lista-carrito"></tbody>
         </table>
-      </div>
+      </section>
 
-      <a
-        class="btn btn-fancyPrimary"
-        style="width: 100%;"
-        >Comprar todos</a
-      >
+      <section class="card carrito__informacion">
+        <h3>Subtotal</h3>
+
+        <section id="carrito__subtotal"></section>
+
+        <div class="carrito__envio">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="rdbTipoEntrega"
+              id="rdbTienda"
+              value="tienda"
+              checked
+            />
+            <label class="form-check-label" for="rdbTienda">
+              Recogida en tienda
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="rdbTipoEntrega"
+              id="rdbDomicilio"
+              value="domicilio"
+            />
+            <label class="form-check-label" for="rdbDomicilio">
+              Entrega a domicilio
+            </label>
+          </div>
+          <small>Las opciones de envío se actualizarán durante el pago.</small>
+        </div>
+
+        <!-- <section>
+          <div class="mb-3">
+            <label for="provincia" class="form-label">Provincia</label>
+            <input type="text" class="form-control" id="provincia">
+          </div>
+
+          <div class="mb-3">
+            <label for="ciudad" class="form-label">Ciudad</label>
+            <input type="text" class="form-control" id="ciudad">
+          </div>
+
+          <div class="mb-3">
+            <label for="codigoPostal" class="form-label">Código Postal</label>
+            <input type="number" class="form-control" id="codigoPostal">
+          </div>
+        </section> -->
+
+        <section class="carrito__cupon">
+          <div class="mb-3">
+            <h5 for="ciudad" class="form-label">Cupón</h5>
+            <small><b>(Usa el cupón: PRUEBA22)</b></small>
+            <div>
+              <input type="text" class="form-control" id="cupon" />
+            </div>
+            <a class="btn btn-fancyPrimary" id="btnAplicarCupon" style="width: 100%"
+              >APLICAR CUPÓN</a
+            >
+          </div>
+        </section>
+
+        <section>
+          <div class="carrito__total">
+            <h3>Total</h3>
+            <span id="total"></span>
+          </div>
+          <br />
+          <a class="btn btn-fancyPrimary" id ="btnCheckout" style="width: 100%">IR A CHECKOUT</a>
+        </section>
+      </section>
     </main>
+    
+    <div id="toast" class="toast hide"></div>
+
   </body>
+  
   <script type="module" src="../js/verCarrito.js"></script>
 </html>
